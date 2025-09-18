@@ -1,0 +1,30 @@
+### Get reviews for a movie
+GET http://localhost:8000/api/v1/reviews/movie/101
+###
+POST http://localhost:8000/api/v1/reviews/new
+Content-Type: application/json
+
+{
+  "movieId": "101",
+  "user": "Ritvik",
+  "review": "Nice movie"
+}
+
+HTTP/1.1 200  - OK
+x-powered-by: Express
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+content-length: 20
+etag: W/"14-Y53wuE/mmbSikKcT/WualL1N65U"
+date: Wed, 10 Sep 2025 07:00:37 GMT
+connection: close
+###
+PUT http://localhost:8000/api/v1/reviews/REVIEW_ID
+Content-Type: application/json
+
+{
+  "user": "Ritvik Singh",
+  "review": "Updated review text"
+}
+###
+DELETE http://localhost:8000/api/v1/reviews/REVIEW_ID
